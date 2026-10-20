@@ -1,0 +1,26 @@
+# Modelo de configuração local.
+# Copie para .dev.vars e preencha somente nesse arquivo.
+# Nunca coloque senhas reais neste modelo ou no GitHub.
+
+# IA — OpenRouter
+OPENROUTER_API_KEY=""
+OPENROUTER_MODEL=""
+
+# Controle
+ADMIN_TOKEN=""
+PUBLIC_URL=""
+
+# WhatsApp: ycloud ou zapi
+WHATSAPP_PROVIDER=""
+
+# Se usar YCloud
+YCLOUD_API_KEY=""
+YCLOUD_FROM=""
+
+# Se usar Z-API
+ZAPI_INSTANCE=""
+ZAPI_TOKEN=""
+ZAPI_CLIENT_TOKEN=""
+
+# Telefone que recebe avisos: somente números, com país e DDD
+TELEFONE_DONO=""
