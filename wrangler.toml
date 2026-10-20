@@ -1,0 +1,23 @@
+name = "atendente-24h"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Faz o CEREBRO.md e o CONTEXTO.md entrarem no bundle como texto.
+# A chave é fallthrough, NAO fallback. Com o nome errado o wrangler desliga
+# as regras padrao dos outros tipos de arquivo.
+rules = [{ type = "Text", globs = ["**/*.md"], fallthrough = true }]
+
+# Banco D1. Crie com:  npx wrangler d1 create atendente
+# e cole o database_id que ele devolver aqui embaixo.
+[[d1_databases]]
+binding = "DB"
+database_name = "atendente"
+database_id = "PREENCHA-COM-O-ID-QUE-O-WRANGLER-DEVOLVER"
+
+# Roda de 5 em 5 minutos. O codigo decide o que fazer em cada horario.
+[triggers]
+crons = ["*/5 * * * *"]
+
+[observability]
+enabled = true

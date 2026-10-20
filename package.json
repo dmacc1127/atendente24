@@ -1,0 +1,15 @@
+{
+  "name": "atendente-24h",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --local",
+    "deploy": "wrangler deploy",
+    "banco": "wrangler d1 execute atendente --local --file=./schema.sql",
+    "banco:producao": "wrangler d1 execute atendente --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
